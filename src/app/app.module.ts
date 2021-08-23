@@ -9,14 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { CameraPreview } from '@ionic-native/camera-preview/ngx';
 
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, 
-  			IonicModule.forRoot(), 
-  			AppRoutingModule],
-  providers: [CameraPreview, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    CameraPreview
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

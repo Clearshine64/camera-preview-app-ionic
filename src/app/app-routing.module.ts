@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
+    path: 'camera-modal',
+    loadChildren: () => import('./home/camera-modal.module').then( m => m.CameraModalPageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
